@@ -1,0 +1,338 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.container{
+	width: 300px;
+	margin: 0 auto;
+}
+.hide{
+	display: none;
+}
+/*Header*/
+.page-header{
+	background-image: url('../img/slajd1-BG.png');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	min-height: 420px;
+}
+h1{
+	padding: 60px 0px 75px 0px;
+	font-weight: bold;
+	font-size: 34px;
+	text-align: center;
+}
+.slider-icons>div{
+	width: 230px;
+	min-height: 40px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px auto;
+	padding-top: 10px;
+}
+.slider-icons>div:first-child{
+	background-color: rgba(196, 52, 52, .70);
+}
+.slider-icons>div:nth-of-type(2){
+	background-color: rgba(70, 118, 124, .60);
+}
+.slider-icons>div:last-child{
+	background-color: rgba(70, 111, 77, .60);
+}
+
+/*SECTION*/
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+	margin: 10px 0px;
+}
+
+button{
+	border: 0;
+	background: 0;
+}
+
+/*Menu*/
+nav{
+	text-align: center;
+}
+
+nav ul{
+	list-style: none;
+}
+nav a{
+	text-decoration: none;
+	line-height: 15vh;
+	color: #141f1f;
+	font-weight: bold;
+	font-size: 18px;
+
+}
+
+.text-boxes{
+	min-height: 520px;
+	background-color: #F1F1F1;
+	padding-top: 40px;
+}
+div[class|="article"]{
+	background-image: url('../img/sloj-txb.png');
+	background-color: #ffffff;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	border-top: 1px solid #339999;
+	border-left: 1px solid #339999;
+	border-right: 1px solid #339999;
+	border-bottom: 1px solid #339999;
+}
+div[class|="article"] h4{
+	color: #339999;
+	font-size: 24px;
+	line-height: 2em;
+	padding: 0px 10px;
+}
+div[class|="article"] p{
+	color: #333333;
+	font-size: 12px;
+	line-height: 1.5em;
+	text-align: justify;
+	padding: 0px 10px;
+}
+.nr-article{
+	display: flex;
+	justify-content: space-between;
+}
+.nr-article div{
+	width: 60px;
+	height: 60px;
+	text-align:center;
+	padding-top: 18px; 
+	color: #ffffff;
+	font-size: 24px;
+}
+.nr-article div:nth-of-type(2){
+	background-color: #c43434;
+}
+.nr-article div:nth-of-type(3){
+	background-color: #ffcc00;
+}
+.nr-article div:last-child{
+	background-color: #009933;
+}
+/*Hover*/
+.nr-article div{
+	border-right: 1px solid #339999;
+	border-bottom: 1px solid #339999;
+	border-left: 1px solid #339999;
+	color: #339999;
+/*	padding-bottom: 40px;*/
+}
+/*Photo Galery*/
+.boxes{
+	background-image: url('../img/BG_1.png');
+	width: 100%;
+	height: 1560px;
+	background-position: center;
+	background-size: cover;
+}
+.photo-boxes{
+	padding: 40px 0px 30px 0px;
+}
+.children{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.adult{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+div[class~="foto"]{
+	width: 140px;
+	height: 150px;
+	background-color: #ffffff;
+}
+.octagon{
+	-webkit-clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%);
+	clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%);
+}
+.frame{
+	border-radius: 50%;
+}
+.photo-boxes span{
+	display: block;
+	width: 140px;
+	height: 10px;
+}
+.boy span{
+	background-color: #8393CA;
+}
+.photo-boxes .foto>div{
+	margin: 10px auto;
+	width: 118px;
+	height: 118px;
+}
+.boy>div {
+	background-image: url('../img/PhotoBoxesBoy.png');
+	background-position: 40% 12%;
+	color: #4d64b3;
+}
+.girl>div {
+	background-image: url('../img/PhotoBoxesGirl.png');
+	background-position: 58% 37%;
+	color: #f7803b;
+}
+.man>div {
+	background-image: url('../img/PhotoBoxesMan.png');
+	background-position: 62% 15%;
+	color: #59b14e;
+}
+.woman>div {
+	background-image: url('../img/PhotoBoxesWoman.png');
+	background-position: 35% 19%;
+	color: #d078d3;
+}
+.girl span{
+	background-color: #FAAD81;
+}	
+.man span{
+	background-color: #A3D49C;
+}	
+.woman span{
+	background-color: #E5B6E7;
+}
+.photo-boxes .bk{
+	padding-top: 30px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.bk>p{
+	background-color: rgba(255, 255, 255, .7); 
+	width: 	inherit;
+	font-size: 	20px;
+}
+.bk>p:first-child{
+	margin-bottom: 10px;
+}
+
+/*Monuments*/
+.tower{
+	background-image: url('../img/EiffelTower.png');
+	width: 300px;
+	height: 320px;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(100%);
+	margin-bottom: 20px;
+}
+.statue{
+	background-image: url('../img/StatueOfLiberty.png');
+	width: 300px;
+	height: 320px;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(100%);
+	margin-bottom: 40px;
+}
+.triangle-tower{
+	width: 300px;
+	height: 320px;
+	background: #ffffff;
+	opacity: 0.7;
+	-webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%);
+	clip-path: polygon(0 50%, 0 100%, 100% 100%);
+}
+.triangle-statue{
+	width: 300px;
+	height: 320px;
+	background: #ffffff;
+	opacity: 0.7;
+	-webkit-clip-path: polygon(0 50%, 0 0, 100% 0);
+	clip-path: polygon(0 50%, 0 0, 100% 0);
+}
+.tower img{
+	position: relative;	
+	top: 220px;
+	left: 20px;
+	transform: 	scale(0.8);
+}
+.statue img{
+	position: relative;	
+	bottom: -20px;
+	left: 20px;
+	transform: 	scale(0.8);
+}
+/*Article*/
+.last-section{
+	width: 100%; 
+	height: 435px;
+	background-color: #ffffff;
+}
+.last-section-header{
+	height: 75px;
+	background-color: #7EC8EA;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+.last-section-header h6{
+	display: inline-block;
+	float: right;
+	font-size: 38px;
+	letter-spacing: 10px;
+	padding-right: 80px;
+}
+.last-section-containe{
+	padding-left: 30px;
+	font-size: 14px;
+}
+.last-section-containe li{
+	padding-top: 10px;
+}
+
+/*TABLET*/
+@media screen and (min-width:768px) and (max-width:1023px){
+	.container{
+		width: 730px;
+		margin: 0 auto;
+	}
+	h1{
+	font-size: 68px;
+	}
+	.slider-icons{
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.icons{
+		display: flex;
+		justify-content: space-around;
+	}
+	.icons .T-I{
+		background-image: url('../img/icon_typography.png');
+		width: 80px;
+		height: 80px;
+	}
+	.icons .RWD-I{
+		background-image: url('../img/icon_UXDesign.png');
+		width: 80px;
+		height: 80px;
+	}
+	.icons .UX-I{
+		background-image: url('../img/icon_RWD.png');
+		width: 80px;
+		height: 80px;
+	}
+}
+
+/*Desktop*/ 
+/*@media screen and (min-width: 1024px){
+
+}*/
