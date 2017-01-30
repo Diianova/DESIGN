@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-//Slajder 
-var baner  = document.querySelector('.page-header');
-var imgArray = [ "url(img/slajd2.2-BG.png)", "url(img/slajd3-BG.png)", "url(img/slajd1-BG.png)"]
+//Slider 
+var banner  = document.querySelector('.page-header');
+var titleOfBanner = document.querySelector('header h1')
+var imgArray = [ "url(img/slajd2.2-BG.png)", "url(img/slajd3-BG.png)", "url(img/slajd1-BG.png)"];
 var index = 0;
 
 function newImage(){
 
-	baner.style.backgroundImage = imgArray[index];
+	banner.style.backgroundImage = imgArray[index];
 	index++;
 
 	if(index > imgArray.length){
@@ -17,28 +18,35 @@ function newImage(){
 
 setInterval(newImage, 5000);
 
-baner.addEventListener('click', function(){
-		baner.style.backgroundImage = imgArray[index];
-		index++;
 
-		if(index > imgArray.length){
-		index = 0;
-	}
+imgArray.forEach((elem, id) => {
+	imgArr = [ "url(img/slajd1-BG.png)", "url(img/slajd2.2-BG.png)", "url(img/slajd3-BG.png)"]
+
+	banner.querySelectorAll('.container .slider-icons .sliderBT')[id].addEventListener('click', () => {
+		banner.style.backgroundImage = imgArr[id];
+			if(id == 0){
+				titleOfBanner.innerText = "Feel the Power of Typography";
+			}else if(id == 1){
+				titleOfBanner.innerText = "Feel the Power of RWD";
+			}else{
+				titleOfBanner.innerText = "Feel the Power of UX Design";
+			}
+		
+	});
 });
 
 // Menu 
 
 var iconHumburger = document.querySelector("button");
 var dropDownMenu = document.querySelector("nav");
+var menu = document.querySelector(".page-nav");
 
-console.log(iconHumburger);
 
 iconHumburger.addEventListener('click', function(){
 	dropDownMenu.classList.toggle('hide');
 });
 
 var a = document.querySelectorAll("a");
-console.log(a);
 
 for(var i=0; i<a.length; i++){
 	a[i].addEventListener('click',function(){
@@ -50,20 +58,40 @@ for(var i=0; i<a.length; i++){
 	});
 }
 
+// Choose article
 
-// Przełączenie tekstów
+var figures = document.querySelectorAll("#flex-container label");;
+var texts = document.querySelectorAll("#flex-container #content div");
 
+for(i=0; i<figures.length; i++){
+	figures[i].addEventListener('click', function (){
+		if(this.innerText == 1){
+			texts[0].classList.remove('hide');
+			texts[1].classList.add('hide');
+			texts[2].classList.add('hide');
+			texts[3].classList.add('hide');
+		}else if(this.innerText == 2){
+			texts[0].classList.add('hide');
+			texts[1].classList.remove('hide');
+			texts[2].classList.add('hide');
+			texts[3].classList.add('hide');
+		}else if(this.innerText == 3){
+			texts[0].classList.add('hide');
+			texts[1].classList.add('hide');
+			texts[2].classList.remove('hide');
+			texts[3].classList.add('hide');
+		}else {
+			texts[0].classList.add('hide');
+			texts[1].classList.add('hide');
+			texts[2].classList.add('hide');
+			texts[3].classList.remove('hide');
+		}
 
-var menu2 = document.querySelector("#menu2");
-var texts = menu2.querySelectorAll("div .info");
-var figures = menu2.querySelectorAll("div .nr-article div");
-console.log(texts);
-
-for( i=0; i<=figures.length; i++){
-	figures[i].addEventListener('click',function(){
-		console.log('click');
 	});
+
 }
+
+	
 
 
 });
